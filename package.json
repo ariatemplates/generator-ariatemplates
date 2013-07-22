@@ -1,0 +1,39 @@
+{
+  "name": "generator-ariatemplates",
+  "version": "0.1.0",
+  "description": "An Aria Templates generator for Yeoman",
+  "keywords": [
+      "yeoman-generator",
+      "aria-templates",
+      "aria",
+      "templates"
+  ],
+  "homepage": "https://github.com/ariatemplates/generator-ariatemplates",
+  "bugs": "https://github.com/ariatemplates/generator-ariatemplates/issues",
+  "author": {
+    "name": "Aria Templates",
+    "email": "contact@ariatemplates.com",
+    "url": "http://ariatemplates.com"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ariatemplates/generator-ariatemplates.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.12.0",
+    "underscore.string": "~2.3.1",
+    "ariatemplates" : ">=1.4.7"
+  },
+  "devDependencies": {
+    "mocha": "~1.10.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "license": "Apache",
+  "readmeFilename" : "README.md"
+}
