@@ -30,5 +30,13 @@ The generator-ariatemplates comes also with some subgenerator that you can use t
 - `yo ariatemplates:macro` to generate a macro library
 - `yo ariatemplates:bootstrap` to generate the bootstrap file
 
+## Live Reload
+After creating your project, you can also run the grunt server embedded in order to see your template generated and to start working on it, using the amazing live reload feature.
+
+From your project folder type:
+'grunt server'
+
+The application will open a tab broweser and it will show you your template. If you want to change something inside your template, or you want to add more stuff, just do it and have a look at the browser, your application it will be refreshed automatically without pressing F5.
+
 ## License
 [Apache License](https://en.wikipedia.org/wiki/Apache_License)
