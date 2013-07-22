@@ -1,6 +1,7 @@
 # Generator-ariatemplates
 
 ![Aria Templates logo](http://ariatemplates.com/images/logo-forum.png)
+
 ![Yeoman logo](http://yeoman.io/assets/img/yeoman-logo.png)
 
 An Aria Templates generator for Yeoman.
