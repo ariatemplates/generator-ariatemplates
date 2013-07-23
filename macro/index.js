@@ -33,11 +33,11 @@ util.inherits(MacroGenerator, yeoman.generators.NamedBase);
 MacroGenerator.prototype.files = function files() {
     if (this.isInteractiveMode) {
         var p = path.resolve(this.cfg.appName);
-        if (fs.existsSync(path.join(p, this.name + '.js'))) {
-            console.log('   [' + 'WARN'.yellow + '] The macro ' + this.name + '.js is already there!');
+        if (fs.existsSync(path.join(p, this.name + '.tml'))) {
+            console.log('   [' + 'WARN'.yellow + '] The macro ' + this.name + '.tml is already there!');
         } else {
             this.macroClass = this.cfg.appName + '.lib.' + this.name;
-            this.template('macro.js', this.cfg.appName + '/lib/' + this.name + '.js');
+            this.template('macro.tml', this.cfg.appName + '/lib/' + this.name + '.tml');
         }
     } else {
         _generateFiles(this);
@@ -46,8 +46,8 @@ MacroGenerator.prototype.files = function files() {
 
 function _generateFiles(scope) {
     for (var i=0; i<scope.filesToGenerate.length; i++) {
-        if (fs.existsSync('./' + scope.filesToGenerate[i] + '.js')) {
-            console.log('   [' + 'WARN'.yellow + '] The macro ' + scope.filesToGenerate[i] + '.js is already there!');
+        if (fs.existsSync('./' + scope.filesToGenerate[i] + '.tml')) {
+            console.log('   [' + 'WARN'.yellow + '] The macro ' + scope.filesToGenerate[i] + '.tml is already there!');
             delete scope.filesToGenerate[i];
         }
     }
@@ -67,7 +67,7 @@ function _onATLoaded (args) {
             });
             try {
                 this.macroClass = 'update.with.the.right.classpath.' + this.cfg.macroName;
-                this.template('macro.js', this.cfg.macroName + '.js');
+                this.template('macro.tml', this.cfg.macroName + '.tml');
             } catch (ex) {
                 console.log('   [' + 'ERR'.red + '] The macro skeleton is not there. Please be sure to run the skeleton subgenerator first');
             }
