@@ -75,6 +75,7 @@ module.exports = function(grunt) {
                     middleware: function(connect) {
                         return [
                             livereloadMiddleware,
+                            mountFolder(connect, __dirname),
                             mountFolder(connect, ariaConfiguration.root)
                         ];
                     }
