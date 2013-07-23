@@ -1,4 +1,4 @@
-# Generator-ariatemplates
+# generator-ariatemplates
 
 ![Aria Templates logo](http://ariatemplates.com/images/logo-forum.png)
 
