@@ -37,7 +37,7 @@ MacroGenerator.prototype.files = function files() {
             console.log('   [' + 'WARN'.yellow + '] The macro ' + this.name + '.tml is already there!');
         } else {
             this.macroClass = this.cfg.appName + '.lib.' + this.name;
-            this.template('macro.tml', this.cfg.appName + '/lib/' + this.name + '.tml');
+            this.template('macro.js', this.cfg.appName + '/lib/' + this.name + '.tml');
         }
     } else {
         _generateFiles(this);
@@ -67,7 +67,7 @@ function _onATLoaded (args) {
             });
             try {
                 this.macroClass = 'update.with.the.right.classpath.' + this.cfg.macroName;
-                this.template('macro.tml', this.cfg.macroName + '.tml');
+                this.template('macro.js', this.cfg.macroName + '.tml');
             } catch (ex) {
                 console.log('   [' + 'ERR'.red + '] The macro skeleton is not there. Please be sure to run the skeleton subgenerator first');
             }

@@ -110,7 +110,7 @@ SkeletonGenerator.prototype.files = function files() {
     if (this.cfg.macro) {
         var macroContent = macroGenerator.generateMacro(this.ariaGenerator);
         if (macroContent) {
-            var macroPath = path.join(__dirname, '../macro/templates/macro.js');
+            var macroPath = path.join(__dirname, '../macro/templates/macro.tml');
             if (fs.existsSync(macroPath)) {
                 fs.unlinkSync(macroPath);
             }
