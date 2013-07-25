@@ -5,8 +5,7 @@ var fs = require('fs');
 var path = require('path');
 
 var TemplateGenerator = module.exports = function TemplateGenerator(args, options, config) {
-    // By calling `NamedBase` here, we get the argument to the subgenerator call
-    // as `this.name`.
+
     try {
         yeoman.generators.NamedBase.apply(this, arguments);
     } catch (ex) {
@@ -57,7 +56,6 @@ TemplateGenerator.prototype.files = function files() {
             if (fs.existsSync(path.join(p, '/style/' + this.name + 'Style.tpl.css'))) {
                 console.log('   [' + 'WARN'.yellow + '] The css template ' + this.name + 'Style.tpl.css is already there!');
             } else {
-                //this.cssTemplateClass = this.cfg.appName + '.style.' + this.name + 'Style';
                 this.template('templateCss.tpl.css', this.cfg.appName + '/style/' + this.name + 'Style.tpl.css');
             }
         }

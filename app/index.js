@@ -192,7 +192,7 @@ AriatemplateGenerator.prototype.projectfiles = function projectfiles() {
 };
 
 AriatemplateGenerator.prototype.runtime = function runtime() {
-    this.template('_bowerrc', 'bowerrc');
+    this.template('_bowerrc', '.bowerrc');
     this.copy('gitignore', '.gitignore');
 };
 
