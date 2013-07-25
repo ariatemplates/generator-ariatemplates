@@ -5,8 +5,7 @@ var path = require('path');
 var fs = require('fs');
 
 var CsstemplateGenerator = module.exports = function CsstemplateGenerator(args, options, config) {
-  // By calling `NamedBase` here, we get the argument to the subgenerator call
-  // as `this.name`.
+
      try {
         yeoman.generators.NamedBase.apply(this, arguments);
     } catch (ex) {
@@ -37,7 +36,7 @@ CsstemplateGenerator.prototype.files = function files() {
             console.log('   [' + 'WARN'.yellow + '] The css template ' + this.name + '.tpl.css is already there!');
         } else {
             this.csstemplateClass = this.cfg.appName + '.style.' + this.name;
-            this.template('csstemplate.js', this.cfg.appName + '/style/' + this.name + '.tpl.css');
+            this.template('csstemplate.tpl.css', this.cfg.appName + '/style/' + this.name + '.tpl.css');
         }
     } else {
         _generateFiles(this);
@@ -68,7 +67,7 @@ function _onATLoaded (args) {
             });
             try {
                 this.csstemplateClass = 'update.with.the.right.classpath.' + this.cfg.cssName;
-                this.template('csstemplate.js', this.cfg.cssName + '.tpl.css');
+                this.template('csstemplate.tpl.css', this.cfg.cssName + '.tpl.css');
             } catch (ex) {
                 console.log('   [' + 'ERR'.red + '] The controller skeleton is not there. Please be sure to run the skeleton subgenerator first');
             }

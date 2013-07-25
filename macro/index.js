@@ -5,8 +5,7 @@ var path = require('path');
 var fs = require('fs');
 
 var MacroGenerator = module.exports = function MacroGenerator(args, options, config) {
-  // By calling `NamedBase` here, we get the argument to the subgenerator call
-  // as `this.name`.
+
     try {
         yeoman.generators.NamedBase.apply(this, arguments);
     } catch (ex) {
@@ -37,7 +36,7 @@ MacroGenerator.prototype.files = function files() {
             console.log('   [' + 'WARN'.yellow + '] The macro ' + this.name + '.tml is already there!');
         } else {
             this.macroClass = this.cfg.appName + '.lib.' + this.name;
-            this.template('macro.js', this.cfg.appName + '/lib/' + this.name + '.tml');
+            this.template('macro.tml', this.cfg.appName + '/lib/' + this.name + '.tml');
         }
     } else {
         _generateFiles(this);
@@ -67,7 +66,7 @@ function _onATLoaded (args) {
             });
             try {
                 this.macroClass = 'update.with.the.right.classpath.' + this.cfg.macroName;
-                this.template('macro.js', this.cfg.macroName + '.tml');
+                this.template('macro.tml', this.cfg.macroName + '.tml');
             } catch (ex) {
                 console.log('   [' + 'ERR'.red + '] The macro skeleton is not there. Please be sure to run the skeleton subgenerator first');
             }

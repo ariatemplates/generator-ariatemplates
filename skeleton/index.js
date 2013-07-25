@@ -12,8 +12,6 @@ var cssGenerator = require('../app/lib/generators/CSSTemplateGenerator');
 var macroGenerator = require('../app/lib/generators/MacroGenerator');
 
 var SkeletonGenerator = module.exports = function SkeletonGenerator(args, options, config) {
-  // By calling `NamedBase` here, we get the argument to the subgenerator call
-  // as `this.name`.
   yeoman.generators.NamedBase.apply(this, arguments);
   this.ariaGenerator = args[1];
   this.cfg = args[2];
@@ -97,7 +95,7 @@ SkeletonGenerator.prototype.files = function files() {
     if (this.cfg.csstemplate) {
         var cssContent = cssGenerator.generateCSSTemplate(this.ariaGenerator);
         if (cssContent) {
-            var cssPath = path.join(__dirname, '../csstemplate/templates/csstemplate.js');
+            var cssPath = path.join(__dirname, '../csstemplate/templates/csstemplate.tpl.css');
             if (fs.existsSync(cssPath)) {
                 fs.unlinkSync(cssPath);
             }
@@ -127,6 +125,7 @@ SkeletonGenerator.prototype.files = function files() {
             if (fs.existsSync(bootstrapPath)) {
                 fs.unlinkSync(bootstrapPath);
             }
+            bootstrapContent.bootstrap.content = bootstrapContent.bootstrap.content.replace('<script type="text/javascript">', '<script type="text/javascript">\r\n                aria.core.DownloadMgr.updateRootMap({\r\n                    "<%= appClass%>": {"*" : Aria.rootFolderPath + "../../"}\r\n                });\r\n');
             this.write(bootstrapPath, bootstrapContent.bootstrap.content);
         } else {
             console.log('   [' + 'ERR'.red + '] Something bad happened during creation of your bootstrap file. I\'m sorry.');
