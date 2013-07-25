@@ -5,8 +5,7 @@ var fs = require('fs');
 var path = require('path');
 
 var BootstrapGenerator = module.exports = function BootstrapGenerator(args, options, config) {
-  // By calling `NamedBase` here, we get the argument to the subgenerator call
-  // as `this.name`.
+
     try {
         yeoman.generators.NamedBase.apply(this, arguments);
     } catch (ex) {
@@ -43,14 +42,15 @@ BootstrapGenerator.prototype.files = function files() {
             if (this.cfg.ctrl) {
                 this.controllerClass = this.cfg.appName + '.' + this.cfg.ctrlName;
             }
-
-            this.template('bootstrap.js', this.cfg.appName + '/' + this.name + '.html');
+            this.appClass = this.cfg.appName;
+            this.template('bootstrap.js', this.name + '.html');
         }
     } else {
         if (fs.existsSync('./' + this.name + '.html')) {
             console.log('   [' + 'WARN'.yellow + '] The index.html is already there!');
         } else {
             _loadFramework(this);
+            this.appClass = this.cfg.appName;
             this.templateClass = 'update.with.the.right.classpath.MyTemplate';
             this.controllerClass = 'update.with.the.right.classpath.MyController';
             this.template('bootstrap.js', this.name + '.html');

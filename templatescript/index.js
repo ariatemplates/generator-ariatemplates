@@ -5,8 +5,7 @@ var fs = require('fs');
 var path = require('path');
 
 var TemplatescriptGenerator = module.exports = function TemplatescriptGenerator(args, options, config) {
-  // By calling `NamedBase` here, we get the argument to the subgenerator call
-  // as `this.name`.
+
     try {
         yeoman.generators.NamedBase.apply(this, arguments);
     } catch (ex) {

@@ -23,12 +23,12 @@ Getting started
 
 The generator-ariatemplates comes also with some subgenerator that you can use to generate single files.
 
-- `yo ariatemplates:template` to generate a template
-- `yo ariatemplates:controller` to generate a module controller
-- `yo ariatemplates:interface` to generate an interface for a module controller
-- `yo ariatemplates:csstemplate` to generate a CSS template
-- `yo ariatemplates:macro` to generate a macro library
-- `yo ariatemplates:bootstrap` to generate the bootstrap file
+- `yo ariatemplates:template MyTemplate` to generate a template
+- `yo ariatemplates:controller MyController` to generate a module controller
+- `yo ariatemplates:interface IMyInterface` to generate an interface for a module controller
+- `yo ariatemplates:csstemplate MyCssTemplate` to generate a CSS template
+- `yo ariatemplates:macro MyMacro` to generate a macro library
+- `yo ariatemplates:bootstrap index` to generate the bootstrap file
 
 
 ## Live Reload
@@ -38,10 +38,10 @@ After creating your project, you can also run the grunt server embedded in order
 From your project folder type:
 'grunt server'
 
-The application will open a tab broweser and it will show you your template. If you want to change something inside your template, or you want to add more stuff, just do it and have a look at the browser, your application it will be refreshed automatically without pressing F5.
+The application will open a tab browser and it will show you your template. If you want to change something inside your template, or you want to add more stuff, just do it and have a look at the browser, your application it will be refreshed automatically without pressing F5.
 
 ## What does it generate?
-As explained before, there are 3 possible way to call the generator:
+As explained before, there are 3 possible ways to call the generator:
 - calling it in basic mode
 - calling it in wizard mode
 - calling a subgenerator
@@ -75,7 +75,7 @@ So it creates this project structure:
 	- bower.json
 	- package.json
 
-Inside this structure you'll find your aria templates file inside the application name folder (in this example 'myapp'), the aria templates framework inside the aria folder, the bower's dependencies inside bower_components folder, and the Gruntfile at the root of the folder.
+Inside this structure you'll find your Aria Templates file inside the application name folder (in this example 'myapp'), the Aria Templates framework inside the aria folder, the bower's dependencies inside bower_components folder, and the Gruntfile at the root of the folder.
 
 
 ### Wizard Mode

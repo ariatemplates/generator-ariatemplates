@@ -4,6 +4,6 @@
     "appPath": "<%= _.slugify(answers.appName) %>",
     "testPath": "test",
     "dependencies": {
-        "aria": "https://github.com/ariatemplates/ariatemplates.git"
+        "ariatemplates": ">=1.4.7"
     }
 }
