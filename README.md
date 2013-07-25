@@ -5,7 +5,7 @@
 An Aria Templates generator for Yeoman.
 
 ### Travis build status
-[![Build Status](https://secure.travis-ci.org/ariatemplates/generator-ariatemplates.png?branch=master)](https://travis-ci.org/ariatemplates/generator-ariatemplate)
+[![Build Status](https://secure.travis-ci.org/ariatemplates/generator-ariatemplates.png?branch=master)](https://travis-ci.org/ariatemplates/generator-ariatemplates)
 
 
 Getting started
