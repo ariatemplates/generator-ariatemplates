@@ -18,10 +18,16 @@ Getting started
 	- `yo ariatemplates --wizard` to chose which file you want to generate for you project
 	- `yo ariatemplates --help` for help
 
+After creating your files, you can actually see how everything works launching the command:
+`grunt server`
+
+It will open a new tab inside your browser and display the Aria Templates hello world template.
+After that you can start working on your awesome AT project!
+
 
 ## SubGenerators
 
-The generator-ariatemplates comes also with some subgenerator that you can use to generate single files.
+The generator-ariatemplates comes also with some subgenerator that you can use to generate single/multiple files.
 
 - `yo ariatemplates:template MyTemplate` to generate a template
 - `yo ariatemplates:controller MyController` to generate a module controller
@@ -30,15 +36,6 @@ The generator-ariatemplates comes also with some subgenerator that you can use t
 - `yo ariatemplates:macro MyMacro` to generate a macro library
 - `yo ariatemplates:bootstrap index` to generate the bootstrap file
 
-
-## Live Reload
-
-After creating your project, you can also run the grunt server embedded in order to see your template generated and to start working on it, using the amazing live reload feature.
-
-From your project folder type:
-'grunt server'
-
-The application will open a tab browser and it will show you your template. If you want to change something inside your template, or you want to add more stuff, just do it and have a look at the browser, your application it will be refreshed automatically without pressing F5.
 
 ## What does it generate?
 As explained before, there are 3 possible ways to call the generator:
@@ -57,8 +54,7 @@ When you call the generator using `yo ariatemplates` the application generates t
 So it creates this project structure:
 
 - MyFolder
-	- aria
-	- bower_components
+	- ariatemplates
 	- myapp
 		- lib
 			- MyMacro.tml
@@ -69,9 +65,9 @@ So it creates this project structure:
 			- MyTemplateScript.js
 		- IMyInterface.js
 		- MyController.js
-		- index.html
 	- node_modules
 	- Gruntfile.js
+	- index.html
 	- bower.json
 	- package.json
 
@@ -89,6 +85,16 @@ When you use one of the six subgenerator you creates, inside the current folder,
 For instance, when you do `yo ariatemplates:controller MyController`, the subgenerator creates a controller file inside the current folder.
 
 You can also create multiple files in one single command, doing `yo ariatemplates:controller MyFirstController MySecondController MyThirdController`. This is particularly useful when you know that you'll need a lot of files, so you can generate them in one command.
+
+
+## A cool feature: Live Reload
+
+After creating your project, you can also run the grunt server embedded in order to see your template generated and to start working on it, using the amazing live reload feature.
+
+From your project folder type:
+`grunt server`
+
+The application will open a tab browser and it will show you your template. If you want to change something inside your template, or you want to add more stuff, just do it and have a look at the browser, your application it will be refreshed automatically without pressing F5.
 
 
 ## Help
