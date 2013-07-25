@@ -1,3 +1,11 @@
 node_modules
 .DS_Store
 npm-debug.log
+bootstrap/templates
+controller/templates
+csstemplate/templates
+interface/templates
+macro/templates
+template/templates
+templatescript/templates
+test/temp
