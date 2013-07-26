@@ -11,18 +11,29 @@ An Aria Templates generator for Yeoman.
 Getting started
 ===============
 - Make sure you have [yo](https://github.com/yeoman/yo) installed:
-    `npm install -g yo`
-- Install the generator: `npm install -g generator-ariatemplates`
-- Run: 
-	- `yo ariatemplates` to create a very basic aria templates project
-	- `yo ariatemplates --wizard` to chose which file you want to generate for you project
-	- `yo ariatemplates --help` for help
+
+  `npm install -g yo`
+- Install: `npm install -g generator-ariatemplates`
+- Run: `yo ariatemplates` to create a very basic aria templates project
 
 After creating your files, you can actually see how everything works launching the command:
 `grunt server`
 
 It will open a new tab inside your browser and display the Aria Templates hello world template.
 After that you can start working on your awesome AT project!
+
+
+## Options
+
+- `--wizard`
+
+  to chose which file you want to generate for you project.
+- `--skip-install`
+
+  to skip the automatic execution of `bower` and `npm` after scaffolding has finished.
+- `--help` for help
+
+  well, to display the integrated help.
 
 
 ## SubGenerators
