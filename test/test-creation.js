@@ -2,18 +2,20 @@
 'use strict';
 
 var path    = require('path');
-var fs      = require('fs');
 var helpers = require('yeoman-generator').test;
 
 
 describe('ariatemplates generator', function () {
+
+  var folderName = 'temp';
+
   beforeEach(function (done) {
-    helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
+    helpers.testDirectory(path.join(__dirname, folderName), function (err) {
       if (err) {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('ariatemplates:app', [
+      var deps = [
         '../../app',
         '../../bootstrap',
         '../../controller',
@@ -23,7 +25,9 @@ describe('ariatemplates generator', function () {
         '../../skeleton',
         '../../template',
         '../../templatescript'
-      ]);
+      ];
+
+      this.ariatemplates = helpers.createGenerator('ariatemplates:app', deps);
       done();
     }.bind(this));
   });
@@ -47,13 +51,23 @@ describe('ariatemplates generator', function () {
       'package.json'
     ];
 
-    helpers.mockPrompt(this.app, {
+    helpers.mockPrompt(this.ariatemplates, {
       'appName': 'myapp'
     });
-    this.app.options['skip-install'] = true;
-    this.app.run({}, function () {
+    this.ariatemplates.options['skip-install'] = true;
+    this.ariatemplates.run({}, function () {
       helpers.assertFiles(expected);
       done();
     });
   });
+
+  /*it('creates expected content', function (done) {
+    var expectedAppName = 'myapp';
+    var expectedTemplateName = 'MyTemplate';
+    var expectedTemplateScriptName = 'MyTemplateScript';
+    var expectedControllerName = 'MyController';
+    var expectedInterfaceName = 'IMyInterface';
+    var expectedMacroName = 'MyMacro';
+    var expectedCssTemplateName = 'MyTemplateStyle';
+  });*/
 });
