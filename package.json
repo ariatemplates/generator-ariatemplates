@@ -1,6 +1,6 @@
 {
   "name": "generator-ariatemplates",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "An Aria Templates generator for Yeoman",
   "keywords": [
       "yeoman-generator",
