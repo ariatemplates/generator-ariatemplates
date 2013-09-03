@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Aria Templates Yeoman Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Yeoman generator for Aria Templates">
+    <meta name="author" content="ariatemplates.com">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="stylesheets/custom.css" rel="stylesheet">
+    <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+          filter: none;
+        }
+      </style>
+    <![endif]-->
+
+    <link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;Bootstrap&quot;:-1,&quot;jQuery&quot;:&quot;1.9.1&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+        
+        <div class="navbar navbar-fixed-top">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#contribute">Contribute</a></li>
+        </ul>
+        <h3 class="muted">generator-ariatemplates</h3>
+      </div>
+      </div>
+      
+
+
+      <hr>
+
+      <div class="jumbotron">
+        <h1>A Yeoman generator for Aria Templates</h1>
+        <p class="lead">The fastest way to start your Aria Templats project in a couple of minutes, with a live demo.</p>
+        <a class="btn btn-large btn-primary" href="https://github.com/ariatemplates/generator-ariatemplates"><i class="icon-github"></i> View Project on Github</a>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <h3>Gettin Started</h3>
+          <ul class="unstyled">
+            <li>Before starting with the Aria Templates generator, make sure you have <strong><a href="https://github.com/yeoman/yo" title="yo">yo</a></strong> installed:
+              <ul>
+                <li><code>npm install -g yo</code></li>
+              </ul>
+            </li>
+            <br/>
+            <li>
+              Then you can start installing the generator:
+              <ul>
+                <li><code>npm install -g generator-ariatemplates</code></li>
+              </ul>
+            </li>
+            <br/>
+            <li>
+              And actually run it:
+              <ul>
+                <li><code>yo ariatemplates</code></li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>That's it!!</strong></p>
+          <p class="spacer">The generator will create all the files needed for your project, including the Aria Templates framework and resolving all the dependencies automatically.</p>
+          <p>To have a look at what the generator creates, type, from the project folder, <code>grunt server</code>. It will open a new tab inside your browser and display the Hello World template.</p>
+          <img src="images/hello-world.png" class="img-polaroid">
+          <p class="spacer">If you are able to see the Hello World message, you are ready to start working on your project!</p>
+          <p>It is possible to call the generator using some specific arguments, in order to customize the project's files that will be created.</p>
+          <p>Let's have a look to the options:</p>
+          <dl class="dl-horizontal">
+            <dt><code>--wizard</code></dt>
+            <dd>using the generator in 'wizard mode' you'll be able to chose which file you want to generate for your project</dd>
+            <dt><code>--skip-install</code></dt>
+            <dd>to skip the automatic execution of <code>bower</code> and <code>npm</code> after scaffolding is finished</dd>
+            <dt><code>--help</code></dt>
+            <dd>well, to display the integrated help</dd>
+          </dl>
+          <p>You can even call just a subgenerator in order to create only a specific subset of files. For more info please have a look to the section "SubGenerators".</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        <div class="span12">
+            <h3>What does it generate?</h3>
+            <p>As explained before, there are 3 possible ways to call the generator:</p>
+            <ul>
+                <li>
+                  calling it in basic mode
+                </li>
+                <li>
+                  calling it in wizard mode
+                </li>
+                <li>
+                  calling a SubGenerator
+                </li>
+            </ul>
+            <p class="spacer">The generator does different things, it generates the Aria Templates project files, of course, but it also fetch the Aria Templates framework from bower and install it, resolving all the dependencies too. It also generates other files, such as, the grunt configuration file, to let you launch the live demo of your project, the package.json, the .gitignore, the bower.json, etc.</p>
+            <p class="spacer">Let's have a look at what it generates.</p>          
+        </div>
+      </div>
+
+      <div class="row-fluid marketing">
+        <div class="span12">
+            <h5>Basic Mode</h5>
+            <p>When you call the generator using <code>yo ariatemplates</code> the application generates the basic file to let you start a new Aria Templates project with this structure:</p>
+            <img src="images/folder-structure.png" class="img-polaroid">
+            <p class="spacer">Inside this structure you'll find your Aria Templates files inside the application name folder (in this example 'myapp'), the Aria Templates framework inside the ariatemplates folder and the Gruntfile.js, package.json, bower.json and index.html at the root.</p>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+            <h5>Wizard Mode</h5>
+            <p>When you call the generator using <code>yo ariatemplates --wizard</code> the application gives you the possibility to customize your project and choice which files generate inside the application name folder ('myapp'). So the project structure differs from the basic mode project structure only inside myapp folder and it will remain the same for the other files.</p>
+        </div>
+      </div>
+      <div class="row-fluid marketing">
+        <div class="span12">
+            <h5>SubGenerator Mode</h5>
+
+            <p>The generator comes with 7 SubGenerators that let you create a certain type of Aria Templates such as templates, template scripts, module controller, etc.</p>
+            <dl class="dl-horizontal dl-custom">
+                <dt><code>yo ariatemplates:template MyTemplate</code></dt>
+                <dd>to generate one or more templates</dd>
+                <dt><code>yo ariatemplates:templatescript MyTemplateScript</code></dt>
+                <dd>to generate one or more template scripts</dd>
+                <dt><code>yo ariatemplates:csstemplate MyTemplateStyle</code></dt>
+                <dd>to generate one or more CSS templates</dd>
+                <dt><code>yo ariatemplates:controller MyController</code></dt>
+                <dd>to generate one or more module controllers</dd>
+                <dt><code>yo ariatemplates:interface IMyInterface</code></dt>
+                <dd>to generate one or more interfaces</dd>
+                <dt><code>yo ariatemplates:macro MyMacro</code></dt>
+                <dd>to generate one or more macro libraries</dd>
+                <dt><code>yo ariatemplates:bootstrap index</code></dt>
+                <dd>to generate the bootstrap file</dd>
+            </dl>
+            <p class="spacer">When you use one of the seven subgenerators the application creates only the file specified in the command typed. You can create more files passing name files separated by space.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        <div class="span12">
+            <h3>A cool feature: Live Reload</h3>
+            <p>Creating your AT project using the generatior gives you the possibility to have a live demo of the project that you created and add also a cool feature, very useful during development, the live reload.</p>
+            <p>The <strong>Live Reload</strong> shows all the changes that you make on your template directely inside the browser without asking you to press F5 refreshing automatically the template's content.</p>
+            <p class="spacer">To launch the live demo type: <code>grunt server</code>.</p>
+            <p>Change something inside the template and check your browser.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div id="contribute" class="row-fluid marketing">
+        <div class="span12">
+            <h3>Supporting & Contributing</h3>
+            <p>Visit our <a href="http://ariatemplates.com/forum/" title="Forum">forum</a>  to ask questions. If you spotted some problems, please open <a href="https://github.com/ariatemplates/generator-ariatemplates/issues?state=open" title="Issues">an issue</a> or ideally, a pull request with the fix and a test.</p>
+            <p>If you feel to contribute please read the <a href="https://github.com/ariatemplates/ariatemplates/blob/master/CONTRIBUTING.md" title="Contributing">Aria Templates guidelines for contributing</a> and try to follow and apply them also to this project.</p>
+            <div class="spacer btn-group">
+              <a href="http://ariatemplates.com" class="btn btn-primary"><i class="icon-globe"></i></a>
+              <a href="http://ariatemplates.com/usermanual" class="btn btn-primary"><i class="icon-book"></i></a>
+              <a href="http://ariatemplates.com/blog/" class="btn btn-primary"><i class="icon-comment"></i></a>
+              <a href="https://twitter.com/ariatemplates" class="btn btn-primary"><i class="icon-github"></i></a>
+              <a href="https://github.com/ariatemplates/ariatemplates" class="btn btn-primary"><i class="icon-twitter"></i></a>
+            </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <div class="row-fluid marketing">
+          <div class="span12">
+            <h5>What is Aria Templates?</h5>
+            <p><small><a href="http://ariatemplates.com/" title="Aria Templates">Aria Templates</a> (aka AT) is an application framework written in JavaScript for building rich and large-scaled enterprise web applications.</small></p>
+            <p><small>It is being developed since 2009 by <a href="http://www.amadeus.com/" title="Amadeus">Amadeus</a> for its professional products. It has been designed for web apps that are used 8+ hours a day, and that need to display and process high amount of data with a minimum of bandwidth consumption.</small></p>
+            <p class="text-right">© Amadeus 2013</p>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
