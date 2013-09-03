@@ -41,9 +41,10 @@ After that you can start working on your awesome AT project!
 The generator-ariatemplates comes also with some subgenerator that you can use to generate single/multiple files.
 
 - `yo ariatemplates:template MyTemplate` to generate a template
+- `yo ariatemplates:template MyTemplateScript` to generate a template script
+- `yo ariatemplates:csstemplate MyTemplateStyle` to generate a CSS template
 - `yo ariatemplates:controller MyController` to generate a module controller
 - `yo ariatemplates:interface IMyInterface` to generate an interface for a module controller
-- `yo ariatemplates:csstemplate MyCssTemplate` to generate a CSS template
 - `yo ariatemplates:macro MyMacro` to generate a macro library
 - `yo ariatemplates:bootstrap index` to generate the bootstrap file
 
@@ -82,35 +83,49 @@ So it creates this project structure:
 	- bower.json
 	- package.json
 
-Inside this structure you'll find your Aria Templates file inside the application name folder (in this example 'myapp'), the Aria Templates framework inside the aria folder, the bower's dependencies inside bower_components folder, and the Gruntfile at the root of the folder.
+Inside this structure you'll find your Aria Templates files inside the application name folder (in this example 'myapp'), the Aria Templates framework inside the ariatemplates folder and the Gruntfile.js, package.json, bower.json and index.html at the root.
 
 
 ### Wizard Mode
 
-When you call the generator using `yo ariatemplates --wizard` the application gives you the possibility to choice which file inside the application name folder (in this example is myapp) you want to generate. So the project structure differs from the basic mode project structure only inside myapp folder, because you choose what to create, and it is the same for the other files and folders
+When you call the generator using `yo ariatemplates --wizard` the application gives you the possibility to customize your project and choice which files generate inside the application name folder ('myapp'). So the project structure differs from the basic mode project structure only inside myapp folder and it will remain the same for the other files.
 
 
 ### Subgenerator Mode
 
-When you use one of the six subgenerator you creates, inside the current folder, the specific file that the subgenerator can create.
-For instance, when you do `yo ariatemplates:controller MyController`, the subgenerator creates a controller file inside the current folder.
+The generator comes with 7 SubGenerators that let you create a certain type of Aria Templates such as templates, template scripts, module controller, etc.
 
-You can also create multiple files in one single command, doing `yo ariatemplates:controller MyFirstController MySecondController MyThirdController`. This is particularly useful when you know that you'll need a lot of files, so you can generate them in one command.
+- `yo ariatemplates:template MyTemplate` : to generate one or more templates
+- `yo ariatemplates:templatescript MyTemplateScript` : to generate one or more template scripts
+- `yo ariatemplates:csstemplate MyTemplateStyle` : to generate one or more CSS templates
+- `yo ariatemplates:controller MyController` : to generate one or more module controllers
+- `yo ariatemplates:interface IMyInterface` : to generate one or more interfaces
+- `yo ariatemplates:macro MyMacro` : to generate one or more macro libraries
+- `yo ariatemplates:bootstrap index` : to generate the bootstrap file
+
+When you use one of the seven subgenerators the application creates only the file specified in the command typed. You can create more files passing name files separated by space.
 
 
 ## A cool feature: Live Reload
 
-After creating your project, you can also run the grunt server embedded in order to see your template generated and to start working on it, using the amazing live reload feature.
+Creating your AT project using the generatior gives you the possibility to have a live demo of the project that you created and add also a cool feature, very useful during development, the live reload.
+The Live Reload shows all the changes that you make on your template directely inside the browser without asking you to press F5 refreshing automatically the template's content.
 
-From your project folder type:
-`grunt server`
+To launch the live demo type: `grunt server`.
 
-The application will open a tab browser and it will show you your template. If you want to change something inside your template, or you want to add more stuff, just do it and have a look at the browser, your application it will be refreshed automatically without pressing F5.
+Change something inside the template and check your browser.
 
 
 ## Help
 
 The Aria Templates generator provides also an help guide. Just type `yo ariatemplates --help` to consult it.
+
+
+## Running the generator-ariatemplates on Linux
+
+If you want to use the generator on linux platform, maybe you'll have some issues due to how yeoman works on linux.
+
+If you face a problem with `update-notifier-yo.xml` file you should have a look to [this post](https://github.com/yeoman/yeoman/issues/1097#issuecomment-21032777) that explains you how to fix the problem.
 
 
 ## Support & Contributing
