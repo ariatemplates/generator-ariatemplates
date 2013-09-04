@@ -61,4 +61,16 @@ h1 {
 
 .muted {
     margin-left: 15px;
+    text-shadow: 0 1px 0 #000;
+    color: #fff;
+}
+
+.navbar .nav>li>a {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+
+.masthead {
+    background-color: #606060;
+    opacity: 0.5;
 }
