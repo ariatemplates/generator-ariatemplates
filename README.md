@@ -41,7 +41,7 @@ After that you can start working on your awesome AT project!
 The generator-ariatemplates comes also with some subgenerator that you can use to generate single/multiple files.
 
 - `yo ariatemplates:template MyTemplate` to generate a template
-- `yo ariatemplates:template MyTemplateScript` to generate a template script
+- `yo ariatemplates:templatescript MyTemplateScript` to generate a template script
 - `yo ariatemplates:csstemplate MyTemplateStyle` to generate a CSS template
 - `yo ariatemplates:controller MyController` to generate a module controller
 - `yo ariatemplates:interface IMyInterface` to generate an interface for a module controller
