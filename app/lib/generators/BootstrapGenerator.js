@@ -9,28 +9,28 @@ var generateBootstrap = function generateBootstrap (ariaGenerator, ariaVersion, 
         if (cfg.ctrl) {
             cfgBootstrap = {
                 "$classpath" : '<%= templateClass%>',
-                "$fwkpath" : "/ariatemplates/src/aria/bootstrap.js",
-                "$fwkskin" : "/ariatemplates/src/aria/css/atskin.js",
+                "$fwkpath" : "/aria/bootstrap.js",
+                "$fwkskin" : "/aria/css/atskin.js",
                 "$moduleCtrl" : '<%= controllerClass %>'
             };
         } else {
             cfgBootstrap = {
                 "$classpath" : '<%= templateClass%>',
-                "$fwkpath" : "/ariatemplates/src/aria/bootstrap.js",
-                "$fwkskin" : "/ariatemplates/src/aria/css/atskin.js"
+                "$fwkpath" : "/aria/bootstrap.js",
+                "$fwkskin" : "/aria/css/atskin.js"
             };
         }
     } else {
         if (cfg.ctrl) {
             cfgBootstrap = {
-                "$fwkpath" : "/ariatemplates/src/aria/bootstrap.js",
-                "$fwkskin" : "/ariatemplates/src/aria/css/atskin.js",
+                "$fwkpath" : "/aria/bootstrap.js",
+                "$fwkskin" : "/aria/css/atskin.js",
                 "$moduleCtrl" : '<%= controllerClass %>'
             };
         } else {
             cfgBootstrap = {
-                "$fwkpath" : "/ariatemplates/src/aria/bootstrap.js",
-                "$fwkskin" : "/ariatemplates/src/aria/css/atskin.js"
+                "$fwkpath" : "/aria/bootstrap.js",
+                "$fwkskin" : "/aria/css/atskin.js"
             };
         }
     }

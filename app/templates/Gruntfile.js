@@ -76,7 +76,8 @@ module.exports = function(grunt) {
                         return [
                             livereloadMiddleware,
                             mountFolder(connect, __dirname),
-                            mountFolder(connect, ariaConfiguration.root)
+                            mountFolder(connect, ariaConfiguration.root),
+                            mountFolder(connect, __dirname + '/node_modules/ariatemplates/src')
                         ];
                     }
                 }
